@@ -1,0 +1,51 @@
+{
+  "id": "compilers/arm-none-eabi-gcc",
+  "version": "2017.6.0",
+  "description": "The GNU Arm Embedded Toolchain is a ready-to-use, open-source suite of tools for C, C++ and assembly programming.  The GNU Arm Embedded Toolchain targets the 32-bit Arm Cortex-A, Arm Cortex-M, and Arm Cortex-R processor families.  The GNU Arm Embedded Toolchain includes the GNU Compiler (GCC) and is available free of charge directly from Arm  for embedded software development on Windows, Linux, and Mac OS X operating systems.",
+  "summary": "GCC compiler for ARM CPUs.",
+  "demands": {
+    "windows": {
+      "install": {
+        "unzip": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/6_1-2017q1/gcc-arm-none-eabi-6-2017-q1-update-win32-zip.zip",
+        "sha256": "05B857CFCE2936EDFBDF54356DAE28F916B98AC98FA87040BD5D342B9E313A9B"
+      },
+      "exports": {
+        "paths": {
+          "PATH": ["bin"]
+        },
+        "tools": {
+          "GCC_TOOLCHAIN_6_3_1__20170215": "./bin/",
+          "GCC_TOOLCHAIN_6_3_1": "./bin/"
+        }
+      }
+    },
+    "linux and x64": {
+      "install": {
+        "untar": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/6_1-2017q1/gcc-arm-none-eabi-6-2017-q1-update-linux.tar.bz2",
+        "sha256": "E7AAD2579F02E3B095C6D7899CA5E6A70CFA9B8A8CBD6ABD868DA849D416C2EB",
+        "strip": 1
+      }
+    },
+    "osx and x64": {
+      "install": {
+        "untar": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/6_1-2017q1/gcc-arm-none-eabi-6-2017-q1-update-mac.tar.bz2",
+        "sha256": "DE4DE95B09740272AA95CA5A43BB234BA29C323EDDCAD2EE34E901EEBDA910A2",
+        "strip": 1
+      }
+    },
+    "not windows": {
+      "exports": {
+        "paths": {
+          "PATH": ["bin"]
+        },
+        "tools": {
+          "GCC_TOOLCHAIN_6_3_1__20170215": "./bin/",
+          "GCC_TOOLCHAIN_6_3_1": "./bin/"
+        }
+      }
+    },
+    "linux": {
+      "warning": "Ensure libncurses5 is installed with your system package manager before running arm-none-eabi-gdb."
+    }
+  }
+}
