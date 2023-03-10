@@ -1,0 +1,1 @@
+# vcpkg-ce-demo-registry
