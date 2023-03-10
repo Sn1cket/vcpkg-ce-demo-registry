@@ -1,0 +1,19 @@
+{
+  "id": "tools/nuvoton/cmsis-packs",
+  "version": "1.3.12",
+  "description": "",
+  "summary": "",
+  "demands": {
+    "windows and x64": {
+      "install": {
+        "unzip": "https://github.com/OpenNuvoton/cmsis-packs/raw/master/Nuvoton.NuMicro_DFP.1.3.12.pack",
+        "sha256": "898D6A9F0AFF3995F907920C3FE2E8A59770E9E79309206D452A7FE0FAFF09E0"
+      },
+      "exports": {
+        "paths": {
+          "NUMICRO_DFP": "."
+        }
+      }
+    }
+  }
+}
