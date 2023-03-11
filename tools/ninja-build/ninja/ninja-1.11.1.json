@@ -1,0 +1,40 @@
+{
+  "id": "tools/ninja-build/ninja",
+  "version": "1.11.1",
+  "description": "",
+  "summary": "",
+  "demands": {
+    "windows": {
+      "install": {
+        "unzip": "https://github.com/ninja-build/ninja/releases/download/v1.11.1/ninja-win.zip",
+        "sha256": "524B344A1A9A55005EAF868D991E090AB8CE07FA109F1820D40E74642E289ABC"
+      },
+      "exports": {
+        "paths": {
+          "PATH": ["."]
+        }
+      }
+    },
+    "linux and x64": {
+      "install": {
+        "untar": "https://github.com/ninja-build/ninja/releases/download/v1.11.1/ninja-linux.zip",
+        "sha256": "B901BA96E486DCE377F9A070ED4EF3F79DEB45F4FFE2938F8E7DDC69CFB3DF77",
+        "strip": 1
+      }
+    },
+    "osx and x64": {
+      "install": {
+        "untar": "https://github.com/ninja-build/ninja/releases/download/v1.11.1/ninja-mac.zip",
+        "sha256": "482ECB23C59AE3D4F158029112DE172DD96BB0E97549C4B1CA32D8FAD11F873E",
+        "strip": 1
+      }
+    },
+    "not windows": {
+      "exports": {
+        "paths": {
+          "PATH": ["."]
+        }
+      }
+    }
+  }
+}
